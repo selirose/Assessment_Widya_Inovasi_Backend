@@ -3,6 +3,7 @@ const user = require("../models/user");
 
 // Import Modules
 const jwt = require("jsonwebtoken");
+const SECRET_KEY =process.env.SECRET_KEY;
 
 // Create class
 class UserController {
@@ -18,7 +19,7 @@ class UserController {
       {
         user: body,
       },
-      "secret_password"
+      SECRET_KEY
     );
 
     res.status(200).json({
@@ -39,7 +40,7 @@ class UserController {
       {
         user: body,
       },
-      "secret_password"
+      SECRET_KEY
     );
 
     res.status(200).json({

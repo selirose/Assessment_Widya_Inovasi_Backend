@@ -4,6 +4,7 @@ const localStrategy = require("passport-local").Strategy;
 const bcrypt = require("bcrypt");
 const JWTstrategy = require("passport-jwt").Strategy;
 const ExtractJWT = require("passport-jwt").ExtractJwt;
+const SECRET_KEY =process.env.SECRET_KEY; 
 
 // Import user model
 const user = require("../../models/user");
@@ -88,7 +89,7 @@ passport.use(
   "profile",
   new JWTstrategy(
     {
-      secretOrKey: "secret_password", // key for jwt
+      secretOrKey: SECRET_KEY, // key for jwt
       jwtFromRequest: ExtractJWT.fromAuthHeaderAsBearerToken(), // extract token from authorization
       passReqToCallback: true,
     },
