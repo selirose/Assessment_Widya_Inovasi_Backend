@@ -11,9 +11,13 @@ This project require [NodeJS](https://nodejs.org/) to run
 To install:
 
 $ git clone https://github.com/selirose/Assessment_Widya_Inovasi_Backend
+
 $ cd Assessment_Widya_Inovasi_Backend
+
 $ npm install or yarn install
+
 $ npm start or yarn start
+
 
 ## Backend Dependencies
 
